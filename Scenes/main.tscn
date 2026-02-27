@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://c735tvxvfn5dw"]
+
+[ext_resource type="PackedScene" uid="uid://brvugrtukbk1w" path="res://Scenes/boat.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://bybmjgm6bdgpf" path="res://Assets/GroundSand005_COL_2K.jpg" id="2_bo1nx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjvhh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_kry3j"]
+sky_material = SubResource("ProceduralSkyMaterial_jjvhh")
+
+[sub_resource type="Environment" id="Environment_21xkr"]
+background_mode = 2
+sky = SubResource("Sky_kry3j")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bo1nx"]
+transparency = 1
+albedo_color = Color(0.02745098, 0.8666667, 1, 0.25882354)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjgbg"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gbba"]
+albedo_color = Color(0.02745098, 0.8666667, 1, 0.25882354)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjvhh"]
+albedo_color = Color(0, 0.62, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kry3j"]
+albedo_texture = ExtResource("2_bo1nx")
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_21xkr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0.90000004, 1.7, -1.3000001)
+shadow_enabled = true
+
+[node name="Boat" parent="." instance=ExtResource("1_jjgbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+input_left = "left"
+input_right = "right"
+input_forward = "up"
+input_back = "down"
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+radius = 15.0
+height = 1.0
+sides = 60
+material = SubResource("StandardMaterial3D_bo1nx")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+use_collision = true
+inner_radius = 16.0
+outer_radius = 20.0
+sides = 60
+material = SubResource("StandardMaterial3D_jjgbg")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+use_collision = true
+radius = 15.0
+height = 1.0
+sides = 60
+material = SubResource("StandardMaterial3D_8gbba")
+
+[node name="CSGTorus3D2" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.100000024, 0)
+visible = false
+use_collision = true
+inner_radius = 15.0
+outer_radius = 17.0
+sides = 60
+ring_sides = 10
+material = SubResource("StandardMaterial3D_jjvhh")
+
+[node name="CSGTorus3D3" type="CSGTorus3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0)
+material_override = SubResource("StandardMaterial3D_kry3j")
+inner_radius = 14.5
+outer_radius = 21.0
+sides = 20
+ring_sides = 5
