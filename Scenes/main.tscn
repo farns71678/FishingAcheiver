@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c735tvxvfn5dw"]
+[gd_scene load_steps=12 format=3 uid="uid://c735tvxvfn5dw"]
 
 [ext_resource type="PackedScene" uid="uid://brvugrtukbk1w" path="res://Scenes/boat.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bybmjgm6bdgpf" path="res://Assets/GroundSand005_COL_2K.jpg" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://c0nwm6e4xtdv4" path="res://fish_spawner.tscn" id="3_8gbba"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjvhh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -49,10 +50,10 @@ input_right = "right"
 input_forward = "up"
 input_back = "down"
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+[node name="LakeWater" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
-radius = 15.0
+radius = 17.0
 height = 1.0
 sides = 60
 material = SubResource("StandardMaterial3D_bo1nx")
@@ -64,10 +65,10 @@ outer_radius = 20.0
 sides = 60
 material = SubResource("StandardMaterial3D_jjgbg")
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+[node name="LakeBottom" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 use_collision = true
-radius = 15.0
+radius = 16.0
 height = 1.0
 sides = 60
 material = SubResource("StandardMaterial3D_8gbba")
@@ -89,3 +90,5 @@ inner_radius = 14.5
 outer_radius = 21.0
 sides = 20
 ring_sides = 5
+
+[node name="FishSpawner" parent="." instance=ExtResource("3_8gbba")]

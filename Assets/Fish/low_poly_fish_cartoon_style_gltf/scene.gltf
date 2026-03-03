@@ -1,0 +1,289 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 638,
+      "max": [
+        6.013862609863281,
+        1.7438925504684448,
+        1.105006217956543
+      ],
+      "min": [
+        -0.9111633896827698,
+        -2.4348275661468506,
+        -2.4168481826782227
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 7656,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 5104,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 10208,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 15312,
+      "componentType": 5126,
+      "count": 638,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 2808,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "fab-model-conversion",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 11232,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20416,
+      "byteOffset": 11232,
+      "byteStride": 8,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 15312,
+      "byteOffset": 31648,
+      "byteStride": 12,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10208,
+      "byteOffset": 46960,
+      "byteStride": 16,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 57168,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/material_0_baseColor.png"
+    },
+    {
+      "uri": "textures/material_0_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/material_0_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 1.0901162790697674
+        },
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.10901162790697674
+        }
+      },
+      "name": "material_0",
+      "normalTexture": {
+        "index": 2,
+        "texCoord": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 1
+        },
+        "roughnessFactor": 0.4578488372093023
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5,
+            "TEXCOORD_3": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "FAB converted model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.17075051367282867,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.17075051367282867,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.17075051367282867,
+        0.0,
+        -0.34182000160217285,
+        0.13843216001987457,
+        0.14884847402572632,
+        1.0
+      ],
+      "name": "Sphere 2_0"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "FAB converted",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

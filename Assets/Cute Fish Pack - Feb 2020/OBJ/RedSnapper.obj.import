@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cf8haa2lhcqo"
+path="res://.godot/imported/RedSnapper.obj-a8ffa1391679a42c2881c395d60b7dee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RedSnapper.obj-a8ffa1391679a42c2881c395d60b7dee.mesh"]
+
+source_file="res://Assets/Cute Fish Pack - Feb 2020/OBJ/RedSnapper.obj"
+dest_files=["res://.godot/imported/RedSnapper.obj-a8ffa1391679a42c2881c395d60b7dee.mesh", "res://.godot/imported/RedSnapper.obj-a8ffa1391679a42c2881c395d60b7dee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://deia5j1pldy8c"
+path="res://.godot/imported/Swordfish.obj-92e21cb140347646be6a56c412472806.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Swordfish.obj-92e21cb140347646be6a56c412472806.mesh"]
+
+source_file="res://Assets/Cute Fish Pack - Feb 2020/OBJ/Swordfish.obj"
+dest_files=["res://.godot/imported/Swordfish.obj-92e21cb140347646be6a56c412472806.mesh", "res://.godot/imported/Swordfish.obj-92e21cb140347646be6a56c412472806.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
