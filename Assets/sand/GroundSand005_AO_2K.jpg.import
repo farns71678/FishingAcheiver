@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cowta4jg6l3x0"
-path="res://.godot/imported/GroundSand005_Preview1.png-2bb1800e1d10f400113882fff4bae2f8.ctex"
+uid="uid://dgc7rv4abyc1g"
+path="res://.godot/imported/GroundSand005_AO_2K.jpg-f70e9621c667010c8446d66cf3805f01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GroundSand005_Preview1.png"
-dest_files=["res://.godot/imported/GroundSand005_Preview1.png-2bb1800e1d10f400113882fff4bae2f8.ctex"]
+source_file="res://Assets/sand/GroundSand005_AO_2K.jpg"
+dest_files=["res://.godot/imported/GroundSand005_AO_2K.jpg-f70e9621c667010c8446d66cf3805f01.ctex"]
 
 [params]
 

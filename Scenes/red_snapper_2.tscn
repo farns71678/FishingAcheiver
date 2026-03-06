@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq33eehxqdggj"]
+
+[ext_resource type="PackedScene" uid="uid://chnbw1j7l2m57" path="res://Assets/Cute Fish Pack - Feb 2020/Blends/RedSnapper.blend" id="1_34ofo"]
+
+[node name="RedSnapper2" instance=ExtResource("1_34ofo")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70658755, -0.027152104, -0.027147649, 0.70658314)
+bones/1/rotation = Quaternion(-0.008544368, 0.07334381, -0.026785556, 0.99691033)
+bones/2/rotation = Quaternion(-3.1212978e-06, -3.1214106e-06, -0.02158448, 0.99976707)
+bones/3/rotation = Quaternion(-0.007985639, 0.00050227303, -0.030392464, 0.999506)
+bones/4/rotation = Quaternion(0.007988512, -0.00011635764, 0.014565034, 0.9998621)
+bones/5/rotation = Quaternion(1.37209755e-08, 1.8976285e-08, 0.12074192, 0.99268395)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

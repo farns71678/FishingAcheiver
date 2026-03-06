@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://brxr51d4nsolx"]
+
+[ext_resource type="PackedScene" uid="uid://chnbw1j7l2m57" path="res://Assets/Cute Fish Pack - Feb 2020/Blends/RedSnapper.blend" id="1_twvwo"]
+
+[node name="Fish" type="Node3D"]
+
+[node name="RedSnapper2" parent="." instance=ExtResource("1_twvwo")]

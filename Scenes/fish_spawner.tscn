@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0nwm6e4xtdv4"]
+[gd_scene load_steps=10 format=3 uid="uid://c0nwm6e4xtdv4"]
 
 [ext_resource type="Texture2D" uid="uid://dbw6pusno1vjn" path="res://Assets/drop_ring.png" id="1_cpwri"]
+[ext_resource type="Script" uid="uid://bi5ahacqefn7h" path="res://Scripts/fish_spawner.gd" id="1_sddp0"]
 
 [sub_resource type="Curve" id="Curve_k4xdj"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.49242425, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -36,6 +37,7 @@ material = SubResource("StandardMaterial3D_of63f")
 orientation = 1
 
 [node name="FishSpawner" type="Node3D"]
+script = ExtResource("1_sddp0")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 amount = 12

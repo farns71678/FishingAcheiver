@@ -49,10 +49,12 @@ var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
+var fishing: bool = false;
 
 ## IMPORTANT REFERENCES
-@onready var head: Node3D = $Head
+@onready var head: Node3D = $Body/Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var body: Node3D = $Body;
 
 func _ready() -> void:
 	check_input_mappings()
@@ -103,7 +105,7 @@ func _physics_process(delta: float) -> void:
 		move_speed = base_speed
 
 	# Apply desired movement to velocity
-	if can_move:
+	if can_move and !fishing:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(0, 0, input_dir.y)).normalized()
 		if move_dir:
@@ -114,7 +116,7 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, move_speed)
 	else:
 		velocity.x = 0
-		velocity.y = 0
+		velocity.z = 0
 	
 	# Use velocity to actually move
 	move_and_slide()
@@ -127,11 +129,15 @@ func rotate_look(rot_input : Vector2):
 	look_rotation.x -= rot_input.y * look_speed
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
 	look_rotation.y -= rot_input.x * look_speed
-	transform.basis = Basis()
-	rotate_y(look_rotation.y)
+	body.transform.basis = Basis()
+	if (fishing):
+		body.rotate_y(look_rotation.y)
+	else:
+		transform.basis = Basis()
+		rotate_y(look_rotation.y)
+		body.rotate_y(0);
 	head.transform.basis = Basis()
 	head.rotate_x(look_rotation.x)
-
 
 func enable_freefly():
 	collider.disabled = true

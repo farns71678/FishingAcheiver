@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4xmivufexvp"]
+
+[ext_resource type="PackedScene" uid="uid://c18181kq5n3x6" path="res://Assets/Cute Fish Pack - Feb 2020/FBX/RedSnapper.fbx" id="1_cufir"]
+
+[node name="RedSnapper" instance=ExtResource("1_cufir")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-3.1504292e-06, -3.1504292e-06, -0.038862314, 0.9992446)
+bones/1/rotation = Quaternion(-0.008487708, 0.07285746, -0.026081458, 0.99696517)
+bones/2/rotation = Quaternion(-3.1220382e-06, -3.1278198e-06, -0.019971373, 0.99980056)
+bones/3/rotation = Quaternion(-0.007985861, 0.00028667002, -0.029463833, 0.9995339)
+bones/4/rotation = Quaternion(0.007986783, -0.00020288005, 0.025394086, 0.9996456)
+bones/5/rotation = Quaternion(1.496038e-08, 1.7025146e-08, 0.13961552, 0.9902058)

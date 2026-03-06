@@ -1,25 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://brvugrtukbk1w"]
+[gd_scene load_steps=5 format=3 uid="uid://brvugrtukbk1w"]
 
 [ext_resource type="Script" uid="uid://dun31py6mi0br" path="res://addons/proto_controller/proto_controller.gd" id="1_badgh"]
+[ext_resource type="PackedScene" uid="uid://d0jlar5m42we3" path="res://Assets/Cute Fish Pack - Feb 2020/Blends/FishingRod_Lvl1.blend" id="2_badgh"]
 [ext_resource type="ArrayMesh" uid="uid://bfwe3xbsf3e8f" path="res://Assets/Cute Fish Pack - Feb 2020/OBJ/Boat.obj" id="2_g7r5y"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_badgh"]
-height = 2.2187502
-radius = 4.4
+height = 0.3093751
+radius = 0.90000004
 
 [node name="Boat" type="CharacterBody3D"]
 script = ExtResource("1_badgh")
 can_jump = false
 
-[node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
-
 [node name="Collider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0906252, -0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.136, 0.1)
 shape = SubResource("CylinderShape3D_badgh")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.2, 0, -1.7484556e-08, 0, 0.2, 0, 1.7484556e-08, 0, -0.2, 0, 0, 0)
 mesh = ExtResource("2_g7r5y")
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="Head" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8000001, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Body/Head"]
+
+[node name="Rod" parent="Body" instance=ExtResource("2_badgh")]
+transform = Transform3D(0.19999999, 0, 0, 0, 0.15320887, 0.12855752, 0, -0.12855752, 0.15320887, 0, 0.4, -0.3)
