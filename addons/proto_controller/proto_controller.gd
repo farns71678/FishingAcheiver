@@ -104,6 +104,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		move_speed = base_speed
 
+	# Rotate boat
+	if (!fishing):
+		var rotate_speed = -50
+		var rotate_amount: float = -1 * rotate_speed if Input.is_action_pressed("left") else 0;
+		rotate_amount += rotate_speed if Input.is_action_pressed("right") else 0;
+		rotate_y(deg_to_rad(rotate_amount * delta));
+	
 	# Apply desired movement to velocity
 	if can_move and !fishing:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -130,14 +137,16 @@ func rotate_look(rot_input : Vector2):
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
 	look_rotation.y -= rot_input.x * look_speed
 	body.transform.basis = Basis()
-	if (fishing):
-		body.rotate_y(look_rotation.y)
-	else:
-		transform.basis = Basis()
-		rotate_y(look_rotation.y)
-		body.rotate_y(0);
-	head.transform.basis = Basis()
-	head.rotate_x(look_rotation.x)
+	#if (fishing):
+	body.rotate_y(look_rotation.y)
+	head.transform.basis = Basis();
+	head.rotate_x(look_rotation.x);
+	#else:
+		#transform.basis = Basis()
+		#rotate_y(look_rotation.y)
+		#body.rotate_y(0);
+	#head.transform.basis = Basis()
+	#head.rotate_x(look_rotation.x)
 
 func enable_freefly():
 	collider.disabled = true
