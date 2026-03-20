@@ -106,7 +106,7 @@ func _physics_process(delta: float) -> void:
 
 	# Rotate boat
 	if (!fishing):
-		var rotate_speed = -50
+		var rotate_speed = -100
 		var rotate_amount: float = -1 * rotate_speed if Input.is_action_pressed("left") else 0;
 		rotate_amount += rotate_speed if Input.is_action_pressed("right") else 0;
 		rotate_y(deg_to_rad(rotate_amount * delta));
@@ -147,6 +147,16 @@ func rotate_look(rot_input : Vector2):
 		#body.rotate_y(0);
 	#head.transform.basis = Basis()
 	#head.rotate_x(look_rotation.x)
+
+func start_fishing():
+	fishing = true;
+	$Body/BodyRod.visible = true;
+	$StashedRod.visible = false;
+	
+func stop_fishing():
+	fishing = false;
+	$Body/BodyRod.visible = false;
+	$StashedRod.visible = true;
 
 func enable_freefly():
 	collider.disabled = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0nwm6e4xtdv4"]
+[gd_scene load_steps=11 format=3 uid="uid://c0nwm6e4xtdv4"]
 
 [ext_resource type="Texture2D" uid="uid://dbw6pusno1vjn" path="res://Assets/drop_ring.png" id="1_cpwri"]
 [ext_resource type="Script" uid="uid://bi5ahacqefn7h" path="res://Scripts/fish_spawner.gd" id="1_sddp0"]
+[ext_resource type="PackedScene" uid="uid://brxr51d4nsolx" path="res://Scenes/fish.tscn" id="3_6cgqw"]
 
 [sub_resource type="Curve" id="Curve_k4xdj"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.49242425, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -43,3 +44,9 @@ script = ExtResource("1_sddp0")
 amount = 12
 process_material = SubResource("ParticleProcessMaterial_8wxj5")
 draw_pass_1 = SubResource("QuadMesh_bgdmy")
+
+[node name="FishContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+
+[node name="Fish" parent="FishContainer" instance=ExtResource("3_6cgqw")]
+visible = false

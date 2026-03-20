@@ -1,23 +1,38 @@
 extends Node3D
 
+var pond_radius: int = 13;
 var fish_radius: float = 3.5;
 var spawn_radius: float;
 var spawner_pos: Vector2;
-var spawner: Node3D;
+var spawners: Array[FishSpawner] = [];
 
 var water_ref: CSGCylinder3D;
 var boat_ref: CharacterBody3D;
 var fish_label_ref: RichTextLabel;
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize();
 	water_ref = $LakeWater;
 	boat_ref = $Boat;
 	fish_label_ref = $UIContainer/FishingLabel;
 	spawn_radius = water_ref.radius - 2;
 	#spawner_pos = Vector2(spawn_radius * randf_range(0, 1), spawn_radius * randf_range(0, 1))
-	spawner = preload("res://Scenes/fish_spawner.tscn").instantiate();
-	$".".add_child(spawner);
+	var spawner_num = randi_range(4, 6);
+	print("Fish Spawners: %d" % spawner_num);
+	var spawner_res = preload("res://Scenes/fish_spawner.tscn")
+	for n in range (spawner_num):
+		var pos = random_pos();
+		var spawner: FishSpawner = spawner_res.instantiate();
+		$FishSpawnerContainer.add_child(spawner);
+		spawner.position.x = pos.x;
+		spawner.position.z = pos.y;
+		spawners.append(spawner)
+
+func random_pos():
+	return Vector2(randf_range(0, pond_radius * 2) - pond_radius, randf_range(0, pond_radius * 2) - pond_radius)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -27,10 +42,17 @@ func _process(delta: float) -> void:
 		fish_label_ref.visible = false
 		
 	if (Input.is_action_just_pressed("fish") and can_fish()):
-		$Boat.fishing = !$Boat.fishing
+		if ($Boat.fishing):
+			$Boat.stop_fishing();
+		else: 
+			$Boat.start_fishing();
 
 func can_fish():
-	return distance(Vector2(boat_ref.position.x, boat_ref.position.z), Vector2(spawner.position.x, spawner.position.y)) <= fish_radius
+	for n in range(len(spawners)):
+		var spawner = spawners[n];
+		if (distance(Vector2(boat_ref.position.x, boat_ref.position.z), Vector2(spawner.position.x, spawner.position.y)) <= fish_radius):
+			return true
+	return false
 
 func distance(v1: Vector2, v2: Vector2) -> float:
 	return sqrt(pow(v1.x - v2.x, 2) + pow(v1.y - v2.y, 2))

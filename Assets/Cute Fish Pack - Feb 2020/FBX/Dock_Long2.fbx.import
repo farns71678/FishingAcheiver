@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bpclwno4cj3wg"
-path="res://.godot/imported/Lure_1.fbx-2b6a6e9e203e5f1b7177bc27ce94d6e1.scn"
+uid="uid://c12acrreyc7g"
+path="res://.godot/imported/Dock_Long2.fbx-11dff18ad581a41fd7073f78324f936e.scn"
 
 [deps]
 
-source_file="res://Assets/Cute Fish Pack - Feb 2020/FBX/Lure_1.fbx"
-dest_files=["res://.godot/imported/Lure_1.fbx-2b6a6e9e203e5f1b7177bc27ce94d6e1.scn"]
+source_file="res://Assets/Cute Fish Pack - Feb 2020/FBX/Dock_Long2.fbx"
+dest_files=["res://.godot/imported/Dock_Long2.fbx-11dff18ad581a41fd7073f78324f936e.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=0.1
+nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
