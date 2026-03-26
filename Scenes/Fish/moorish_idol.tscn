@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkmhfc87dnq43"]
+
+[ext_resource type="PackedScene" uid="uid://dpcquptrrhpna" path="res://Assets/Fish/MoorishIdol.glb" id="1_him8w"]
+
+[node name="MoorishIdol2" instance=ExtResource("1_him8w")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.0101582045, 0.00022262297, -0.029464379, 0.9995142)
+bones/4/rotation = Quaternion(0.010159374, -0.0002580624, 0.025393596, 0.999626)
+bones/5/rotation = Quaternion(1.37148675e-08, 2.4521473e-08, 0.1396155, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

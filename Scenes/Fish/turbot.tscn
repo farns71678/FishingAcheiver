@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://4tjoqu6ejks8"]
+
+[ext_resource type="PackedScene" uid="uid://baxxnu7u7asj8" path="res://Assets/Fish/Turbot.glb" id="1_uiukh"]
+
+[node name="Turbot" instance=ExtResource("1_uiukh")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.009418426, 0.00024442587, -0.02946421, 0.9995215)
+bones/4/rotation = Quaternion(0.009419514, -0.00023927217, 0.025393777, 0.99963313)
+bones/5/rotation = Quaternion(1.4196197e-08, 1.25686315e-08, 0.13961558, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

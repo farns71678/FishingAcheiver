@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxoaqt82o5idg"]
+
+[ext_resource type="PackedScene" uid="uid://chvf04qeoc8ud" path="res://Assets/Fish/YellowTang.glb" id="1_xx2k2"]
+
+[node name="YellowTang2" instance=ExtResource("1_xx2k2")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487707, 0.07285745, -0.026081454, 0.99696517)
+bones/2/rotation = Quaternion(-3.122038e-06, -3.1277466e-06, -0.01997137, 0.99980056)
+bones/3/rotation = Quaternion(-0.010441073, 0.0002142899, -0.029464459, 0.99951136)
+bones/4/rotation = Quaternion(0.010442266, -0.00026525286, 0.025393516, 0.999623)
+bones/5/rotation = Quaternion(1.4842809e-08, 1.3663469e-08, 0.13961552, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

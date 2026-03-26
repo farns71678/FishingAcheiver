@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://du751xc6y57e2"]
+
+[ext_resource type="PackedScene" uid="uid://8l8f38npegg7" path="res://Assets/Fish/Betta.glb" id="1_erhsb"]
+
+[node name="Betta2" instance=ExtResource("1_erhsb")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.007985859, 0.00028666496, -0.029463833, 0.99953395)
+bones/4/rotation = Quaternion(0.007986783, -0.00020287716, 0.025394091, 0.9996456)
+bones/5/rotation = Quaternion(1.543065e-08, 1.697739e-08, 0.13961557, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

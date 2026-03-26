@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://3sq8a163xwk2"]
+
+[ext_resource type="PackedScene" uid="uid://03m3xnns1ors" path="res://Assets/Fish/Sunfish.glb" id="1_r2hec"]
+
+[node name="Sunfish2" instance=ExtResource("1_r2hec")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487707, 0.07285745, -0.026081454, 0.99696517)
+bones/2/rotation = Quaternion(-3.122038e-06, -3.1277466e-06, -0.01997137, 0.99980056)
+bones/3/rotation = Quaternion(-0.013686775, 0.00011860716, -0.029464982, 0.99947214)
+bones/4/rotation = Quaternion(0.013688334, -0.00034772177, 0.025392525, 0.99958384)
+bones/5/rotation = Quaternion(1.5224902e-08, 1.3406293e-08, 0.13961554, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

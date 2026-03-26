@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://qaw4vtvvrprm"]
+
+[ext_resource type="PackedScene" uid="uid://cmx80t20mjpoa" path="res://Assets/Fish/MandarinFish.glb" id="1_e1s2c"]
+
+[node name="MandarinFish2" instance=ExtResource("1_e1s2c")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.009360848, 0.00024613066, -0.029464196, 0.99952203)
+bones/4/rotation = Quaternion(0.009361922, -0.00023780802, 0.025393795, 0.99963367)
+bones/5/rotation = Quaternion(1.4842811e-08, 1.3674493e-08, 0.13961554, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://m1vmgl1748i6"]
+
+[ext_resource type="PackedScene" uid="uid://dfm6v5oushtyr" path="res://Assets/Fish/RoyalGramma.glb" id="1_aa1b8"]
+
+[node name="RoyalGramma2" instance=ExtResource("1_aa1b8")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.009506643, 0.00024183714, -0.029464245, 0.99952066)
+bones/4/rotation = Quaternion(0.009507735, -0.00024150929, 0.025393765, 0.9996323)
+bones/5/rotation = Quaternion(1.2573179e-08, 1.7885736e-08, 0.13961558, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

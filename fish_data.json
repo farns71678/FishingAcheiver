@@ -1,0 +1,104 @@
+{
+	"fish": [
+		{
+			"name": "Anglerfish",
+			"scene_path": "res://Scenes/Fish/anglerfish.tscn",
+		},
+		{
+			"name": "Armored Catfish",
+			"scene_path": "res://Scenes/Fish/armored_catfish.tscn",
+		},
+		{
+			"name": "Betta",
+			"scene_path": "res://Scenes/Fish/betta.tscn",
+		},
+		{
+			"name": "Blue Goldfish",
+			"scene_path": "res://Scenes/Fish/blue_goldfish.tscn",
+		},
+		{
+			"name": "Butterfly Fish",
+			"scene_path": "res://Scenes/Fish/butterfly_fish.tscn",
+		},
+		{
+			"name": "Cardinal Fish",
+			"scene_path": "res://Scenes/Fish/cardinal_fish.tscn",
+		},
+		{
+			"name": "Coral Grouper",
+			"scene_path": "res://Scenes/Fish/coral_grouper.tscn",
+		},
+		{
+			"name": "Cowfish",
+			"scene_path": "res://Scenes/Fish/cowfish.tscn",
+		},
+		{
+			"name": "Flower Horn",
+			"scene_path": "res://Scenes/Fish/flower_horn.tscn",
+		},
+		{
+			"name": "Koi",
+			"scene_path": "res://Scenes/Fish/koi.tscn",
+		},
+		{
+			"name": "Lionfish",
+			"scene_path": "res://Scenes/Fish/lionfish.tscn",
+		},
+		{
+			"name": "Mandarin Fish",
+			"scene_path": "res://Scenes/Fish/mandarin_fish.tscn",
+		},
+		{
+			"name": "Moorish Idol",
+			"scene_path": "res://Scenes/Fish/moorish_idol.tscn",
+		},
+		{
+			"name": "Parrot Fish",
+			"scene_path": "res://Scenes/Fish/parrot_fish.tscn",
+		},
+		{
+			"name": "Piranha",
+			"scene_path": "res://Scenes/Fish/piranha.tscn",
+		},
+		{
+			"name": "Puffer",
+			"scene_path": "res://Scenes/Fish/puffer.tscn",
+		},
+		{
+			"name": "Red Snapper",
+			"scene_path": "res://Scenes/Fish/red_snapper.tscn",
+		},
+		{
+			"name": "Shark",
+			"scene_path": "res://Scenes/Fish/shark.tscn",
+		},
+		{
+			"name": "Sunfish",
+			"scene_path": "res://Scenes/Fish/sunfish.tscn",
+		},
+		{
+			"name": "Swordfish",
+			"scene_path": "res://Scenes/Fish/swordfish.tscn",
+		},
+		{
+			"name": "Tang",
+			"scene_path": "res://Scenes/Fish/tang.tscn",
+		},
+		{
+			"name": "Tetra",
+			"scene_path": "res://Scenes/Fish/tetra.tscn",
+		},
+		{
+			"name": "Turbot",
+			"scene_path": "res://Scenes/Fish/turbot.tscn",
+		},
+		{
+			"name": "Yellow Tang",
+			"scene_path": "res://Scenes/Fish/yellow_tang.tscn",
+		},
+		{
+			"name": "Zebra Clown Fish",
+			"scene_path": "res://Scenes/Fish/zebra_clown_fish.tscn",
+		},
+	]
+}

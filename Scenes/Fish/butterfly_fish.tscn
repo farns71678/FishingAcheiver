@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://kp8tdtmh2h4h"]
+
+[ext_resource type="PackedScene" uid="uid://cqtyxybjj2wpp" path="res://Assets/Fish/ButterflyFish.glb" id="1_221vq"]
+
+[node name="ButterflyFish" instance=ExtResource("1_221vq")]

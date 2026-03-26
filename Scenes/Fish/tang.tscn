@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqujp5awu0al8"]
+
+[ext_resource type="PackedScene" uid="uid://b8upydp1pmg2e" path="res://Assets/Fish/Tang.glb" id="1_msmak"]
+
+[node name="Tang2" instance=ExtResource("1_msmak")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.010740054, 0.00020547114, -0.02946452, 0.9995082)
+bones/4/rotation = Quaternion(0.010741286, -0.00027284262, 0.02539344, 0.9996199)
+bones/5/rotation = Quaternion(1.5265357e-08, 1.4172716e-08, 0.13961557, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

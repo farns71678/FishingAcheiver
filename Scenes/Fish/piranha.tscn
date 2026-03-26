@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://caylpbvjugupc"]
+
+[ext_resource type="PackedScene" uid="uid://dos8sca0bt6no" path="res://Assets/Fish/Piranha.glb" id="1_vksey"]
+
+[node name="Piranha2" instance=ExtResource("1_vksey")]
+
+[node name="Skeleton3D" parent="Fish_Armature" index="0"]
+bones/0/rotation = Quaternion(-0.70657486, -0.027482035, -0.02747758, 0.70657045)
+bones/1/rotation = Quaternion(-0.008487709, 0.07285746, -0.026081463, 0.9969652)
+bones/2/rotation = Quaternion(-3.1220088e-06, -3.1277393e-06, -0.019971367, 0.99980056)
+bones/3/rotation = Quaternion(-0.009301215, 0.00024788562, -0.029464187, 0.99952257)
+bones/4/rotation = Quaternion(0.009302292, -0.0002362941, 0.025393812, 0.9996343)
+bones/5/rotation = Quaternion(1.2469362e-08, 1.0418566e-08, 0.13961558, 0.9902059)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swimming_Normal"

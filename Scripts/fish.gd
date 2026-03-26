@@ -6,23 +6,35 @@ var speed = 0.5;
 var rad = 0.0;
 var num = rad * radius;
 
-#var fish_mesh: Node3D;
-var redSnapper2: Node3D;
+var fish_mesh;
+#var redSnapper2: Node3D;
+
+
+# parse fish data
+var fish_file: FileAccess = FileAccess.open("res://fish_data.json", FileAccess.READ);
+var fish_content = fish_file.get_as_text();
+var fish_data = JSON.parse_string(fish_content);
+var fish_num: int = len(fish_data.fish)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize();
 	radius = randf_range(0.5, 2.0);
 	direction = 1 if randi_range(0, 1) == 0 else -1;
 	rad = randf() * 2 * PI;
-	speed = 0.4 + randf() * 0.4
+	speed = 0.4 + randf() * 0.4;
+	var fish_index = randi_range(0, fish_num - 1);
+	fish_mesh = load(fish_data.fish[fish_index].scene_path).instantiate();
+	fish_mesh.scale = Vector3(0.1, 0.1, 0.1);
+	add_child(fish_mesh);
 	#fish_mesh = $FishMesh;
-	redSnapper2 = $RedSnapper2
+	#redSnapper2 = $RedSnapper2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	
-	if (radius != 0):
+	if (radius != 0 ):
 		num = direction * rad * radius;
 		rad += direction * speed * delta;
 		
@@ -34,14 +46,14 @@ func _process(delta: float) -> void:
 		
 		# for some reason this works
 		if (direction < 0):
-			redSnapper2.rotation.y = -rad - PI;
+			fish_mesh.rotation.y = -rad - PI;
 		else:
-			redSnapper2.rotation.y = -rad ;
+			fish_mesh.rotation.y = -rad ;
 		
 		#fish_mesh.position.x = cos(rad) * radius;
 		#fish_mesh.position.z = sin(rad) * radius;
-		redSnapper2.position.x = cos(rad) * radius;
-		redSnapper2.position.z = sin(rad) * radius;
+		fish_mesh.position.x = cos(rad) * radius;
+		fish_mesh.position.z = sin(rad) * radius;
 		#if (direction == 1):
 			##if (num > 2 * PI):
 			##	num -= 2 * PI
